@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Me</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    
+
+
+    
+
+    <div class="container">
+        <div class="heading">
+            <h1>Get Jokes As U Wish</h1>
+        </div>
+        <div class="category">
+            <form method="get">
+                <p>Choose Category</p>
+                <br>
+                <br>
+                <div class="buttons">
+                    <input type="submit" class="btn" value="any" id="any" formaction="/any">
+                    <input type="submit" class="btn" value="Misc" id="misc" formaction="/misc">
+                    <input type="submit" class="btn" value="Programming" id="programming" formaction="/Programming">
+                    <input type="submit" class="btn" value="Dark" id="dark" formaction="/Dark">
+                    <input type="submit" class="btn" value="Pun" id="pun" formaction="/Pun">
+                    <input type="submit" class="btn" value="Spooky" id="spooky" formaction="/Spooky">
+                    <input type="submit" class="btn" value="Christmas" id="christmas" formaction="/Christmas">
+                </div>
+                
+                <br>
+                <br>
+                <% if(data.type==="twopart") { %> 
+                    <div class="firstPart">
+                        <h1> <%= data.setup %>  </h1>
+                    </div>
+                    <div class="secondPart">
+                        <h2><%= data.delivery %></h2>
+                    </div>
+                    
+                <% } else if(data.type==="single") {%>
+                    <div class="firstPart">
+                        <h1> <%= data.joke %></h1>
+                    </div>
+                     
+                <% }else { %>
+                    <p></p>
+                <% } %>
+                
+
+            </form>
+            
+        </div>
+        
+        
+    </div>
+    <div class="bottom">
+
+        <% if(data.type==="twopart" || data.type==="single" ) { %>
+            <p>Hope , You smiled.</p>
+        <% } %>
+    </div>
+
+    <div class="post">
+        <form method="get">
+            <input type="submit"  id="submit" value="POST" formaction="/create">
+        </form>
+        
+    </div>
+
+    
+    
+</body>
+</html>

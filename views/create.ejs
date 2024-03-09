@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Me</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="containerPost">
+        <div class="heading size">
+            <h1>Post Your Own Joke. </h1>
+        </div>
+        <div class="form">
+            <form id="createForm" method="post">
+
+                <div class="category3">
+                    <label id="category">Category :</label>
+                    <select id="options">
+                        <option value="">Any</option>
+                        <option value="">Misc</option>
+                        <option value="">Programming</option>
+                        <option value="">Dark</option>
+                        <option value="">Pun</option>
+                        <option value="">Spooky</option>
+                        <option value="">Christmas</option>
+                    </select>
+                </div>
+    
+                <div class="jokeType">
+                    <label id="type">Type : </label>
+                    <select id="jokeType" >
+                        <option value="single">Single</option>
+                        <option value="twopart">Twopart</option>
+                    </select>
+
+                    
+                    <div id="singleJokeFields" class="hidden">
+                        <label for="singleJoke">Joke:</label>
+                        <textarea  id="singleJoke" cols="50" rows="3"></textarea>
+                    </div>
+                
+                    <div id="twopartJokeFields"class="hidden">
+                        <label for="setup">Setup:</label>
+                        <textarea name="setup" id="setup" cols="50" rows="3"></textarea>
+                        <br>
+                    <label for="delivery">Delivery:</label>
+                    <textarea name="delivery" id="delivery" cols="50" rows="3"></textarea>
+                    </div>
+                </div>
+                
+               
+                <div class="flags">
+                    <label id="flags">Flags :</label>
+                    <select id="flagOptions">
+                        <option value="">None</option>
+                        <option value="true">nsfw</option>
+                        <option value="">Religious</option>
+                        <option value="">Political</option>
+                        <option value="">Racist</option>
+                        <option value="">Sexist</option>
+                        <option value="">Explicit</option>
+                    </select>
+                </div>
+                
+                <div class="lang">
+                    <label id="lang">lang(en) :</label>
+                    <input type="radio">
+                    
+                </div>
+
+                <div class="postSubmit">
+                    <input type="submit" id="postSubmit" value="SUBMIT" formaction="/submit">
+                </div>
+                <p><%= data %></p>
+            </form>
+        </div>
+    </div>
+
+    
+        
+    
+
+
+
+
+
+    <script src="script/scripts.js"></script>
+</body>
+</html>
